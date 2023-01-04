@@ -19,7 +19,7 @@
     /* font-family: 'Rubik', sans-serif; */
 
     :root {
-      --blue: hsl(246, 80%, 60%);
+      --soft_blue: hsl(246, 80%, 60%);
       --orange: hsl(15, 100%, 70%);
       --blue: hsl(195, 74%, 62%);
       --red: hsl(348, 100%, 68%);
@@ -53,6 +53,8 @@
     main {
       display: flex;
       flex-direction: row;
+      justify-content: center;
+      align-items: center;
     }
 
     .person {
@@ -66,7 +68,7 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      background-color: var(--blue);
+      background-color: var(--soft_blue);
       padding: 2rem 1.5rem 4rem 1.5rem;
       border-radius: 1rem;
     }
@@ -104,16 +106,40 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      column-gap: 2rem;
+      row-gap: 2rem;
+      padding: 0 0 0 2rem;
     }
 
     .card {
-      max-width: 40rem;
-      width: 100%;
+      display: flex;
+      flex-direction: column;
+      max-width: 15rem;
+      width: 100vh;
     }
 
     .background {
+      display: flex;
       background-color: var(--orange);
       width: 100%;
+      height: 5rem;
+      border-radius: 1rem;
+      position: relative;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .background img {
+      position: absolute;
+      right: 1rem;
+      top: -.5rem;
+    }
+
+    .main_card {
+      background-color: var(--dark_blue);
+      margin: -2rem 0 0 0;
+      border-radius: 1rem;
+      padding: 2rem;
     }
 
     /* .attribution {
@@ -154,84 +180,94 @@
 
         <div class="main_card">
           <header>
-            <h3></h3>
+            <h3>Work</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
-          <p></p>
-          <p></p>
-        </div>
-      </div>
-
-      <!-- <div class="card">
-        <div class="background"></div>
-
-        <div class="main_card">
-          <header>
-            <h3></h3>
-            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
-          </header>
-
-          <p></p>
-          <p></p>
+          <p>32hrs</p>
+          <p>Last week - 36hrs</p>
         </div>
       </div>
 
       <div class="card">
-        <div class="background"></div>
+        <div class="background">
+          <img src="images/icon-work.svg" alt="icon-work.svg">
+        </div>
 
         <div class="main_card">
           <header>
-            <h3></h3>
+            <h3>Work</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
-          <p></p>
-          <p></p>
+          <p>32hrs</p>
+          <p>Last week - 36hrs</p>
         </div>
       </div>
 
       <div class="card">
-        <div class="background"></div>
+        <div class="background">
+          <img src="images/icon-work.svg" alt="icon-work.svg">
+        </div>
 
         <div class="main_card">
           <header>
-            <h3></h3>
+            <h3>Work</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
-          <p></p>
-          <p></p>
+          <p>32hrs</p>
+          <p>Last week - 36hrs</p>
         </div>
       </div>
 
       <div class="card">
-        <div class="background"></div>
+        <div class="background">
+          <img src="images/icon-work.svg" alt="icon-work.svg">
+        </div>
 
         <div class="main_card">
           <header>
-            <h3></h3>
+            <h3>Work</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
-          <p></p>
-          <p></p>
+          <p>32hrs</p>
+          <p>Last week - 36hrs</p>
         </div>
       </div>
 
       <div class="card">
-        <div class="background"></div>
+        <div class="background">
+          <img src="images/icon-work.svg" alt="icon-work.svg">
+        </div>
 
         <div class="main_card">
           <header>
-            <h3></h3>
+            <h3>Work</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
-          <p></p>
-          <p></p>
+          <p>32hrs</p>
+          <p>Last week - 36hrs</p>
         </div>
-      </div> -->
+      </div>
+
+      <div class="card">
+        <div class="background">
+          <img src="images/icon-work.svg" alt="icon-work.svg">
+        </div>
+
+        <div class="main_card">
+          <header>
+            <h3>Work</h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
+          </header>
+
+          <p>32hrs</p>
+          <p>Last week - 36hrs</p>
+        </div>
+      </div>
     </div>
   </main>
 
