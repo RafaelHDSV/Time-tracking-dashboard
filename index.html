@@ -355,32 +355,41 @@
       document.querySelector(`.${currentOption}`).classList.remove('current_option')
       daily.classList.add('current_option')
       currentOption = 'daily'
+      setData()
     })
 
     weekly.addEventListener('click', () => {
       document.querySelector(`.${currentOption}`).classList.remove('current_option')
       weekly.classList.add('current_option')
       currentOption = 'weekly'
+      setData()
     })
 
     monthly.addEventListener('click', () => {
       document.querySelector(`.${currentOption}`).classList.remove('current_option')
       monthly.classList.add('current_option')
       currentOption = 'monthly'
+      setData()
     })
 
-    fetch('data.json').then((response) => {
-      response.json().then((activities) => {
-        console.log(activities);
-        for (let i = 0; i < titleCard.length; i++) {
-          titleCard[i].innerHTML = activities[i].title
-          currentTime[i].innerHTML = `${activities[i].timeframes.weekly.current}hrs`
-          lastTime[i].innerHTML = `Last week - ${activities[i].timeframes.weekly.previous}hrs`
-          imgCard[i].src = `images/icon-${((titleCard[i].innerHTML).replace(' ', '-')).toLocaleLowerCase()}.svg`
-          backgroundCard[i].style.backgroundColor = `var(--${activities[i].color})`
-        }
+    function setData() {
+      fetch('data.json').then((response) => {
+        response.json().then((activities) => {
+          console.log(activities);
+          for (let i = 0; i < titleCard.length; i++) {
+            titleCard[i].innerHTML = activities[i].title
+            currentTime[i].innerHTML = `${activities[i]['timeframes'][currentOption]['current']}hrs`
+            lastTime[i].innerHTML =
+              `Last ${(currentOption.replace('ily','y').replace('ly', ''))} - ${activities[i]['timeframes'][currentOption]['previous']}hrs`
+            backgroundCard[i].style.backgroundColor = `var(--${activities[i].color})`
+            imgCard[i].src =
+              `images/icon-${((titleCard[i].innerHTML).replace(' ', '-')).toLocaleLowerCase()}.svg`
+          }
+        })
       })
-    })
+    }
+
+    setData()
   </script>
 </body>
 
