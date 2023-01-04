@@ -172,14 +172,25 @@
       color: var(--desaturated_blue);
     }
 
-    /* .attribution {
+    footer {
+      color: var(--white);
       font-size: 11px;
       text-align: center;
+      position: absolute;
+      bottom: 1rem;
     }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    } */
+    footer a {
+      text-decoration: none;
+      color: var(--soft_blue);
+      cursor: pointer;
+      transition: .5s all ease;
+    }
+
+    footer a:hover {
+      font-size: 18px;
+      color: var(--orange);
+    }
   </style>
 </head>
 
@@ -301,10 +312,10 @@
     </div>
   </main>
 
-  <!-- <footer class="attribution">
+  <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
     <p>Coded by <a href="https://github.com/RafaelHDSV" target="_blank">Rafael Henrique de Sousa Vieira</a>.</p>
-  </footer> -->
+  </footer>
 </body>
 
 </html>
