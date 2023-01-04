@@ -20,12 +20,12 @@
 
     :root {
       --blue: hsl(246, 80%, 60%);
-      --light_red: hsl(15, 100%, 70%);
-      --soft_blue: hsl(195, 74%, 62%);
-      --light_red: hsl(348, 100%, 68%);
-      --lime_green: hsl(145, 58%, 55%);
+      --orange: hsl(15, 100%, 70%);
+      --blue: hsl(195, 74%, 62%);
+      --red: hsl(348, 100%, 68%);
+      --green: hsl(145, 58%, 55%);
       --violet: hsl(264, 64%, 52%);
-      --soft_orange: hsl(43, 84%, 65%);
+      --yellow: hsl(43, 84%, 65%);
       --very_dark_blue: hsl(226, 43%, 10%);
       --dark_blue: hsl(235, 46%, 20%);
       --desaturated_blue: hsl(235, 45%, 61%);
@@ -48,6 +48,11 @@
       min-width: 100%;
       min-height: 100vh;
       background-color: var(--very_dark_blue);
+    }
+
+    main {
+      display: flex;
+      flex-direction: row;
     }
 
     .person {
@@ -87,6 +92,30 @@
       font-size: 42px;
     }
 
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem;
+      color: var(--desaturated_blue);
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .card {
+      max-width: 40rem;
+      width: 100%;
+    }
+
+    .background {
+      background-color: var(--orange);
+      width: 100%;
+    }
+
     /* .attribution {
       font-size: 11px;
       text-align: center;
@@ -99,23 +128,112 @@
 </head>
 
 <body>
+  <main>
+    <div class="person">
+      <div class="person_info">
+        <img src="images/image-jeremy.png" alt="image-jeremy.png">
 
-  <div class="person">
-    <div class="person_info">
-      <img src="images/image-jeremy.png" alt="image-jeremy.png">
+        <div class="text">
+          <p>Report for</p>
+          <h2>Jeremy Robson</h2>
+        </div>
+      </div>
 
-      <div class="text">
-        <p>Report for</p>
-        <h2>Jeremy Robson</h2>
+      <div class="options">
+        <p>Daily</p>
+        <p>Weekly</p>
+        <p>Monthly</p>
       </div>
     </div>
 
-    <div class="options">
-      <p>Daily</p>
-      <p>Weekly</p>
-      <p>Monthly</p>
+    <div class="dashboard">
+      <div class="card">
+        <div class="background">
+          <img src="images/icon-work.svg" alt="icon-work.svg">
+        </div>
+
+        <div class="main_card">
+          <header>
+            <h3></h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
+          </header>
+
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+
+      <!-- <div class="card">
+        <div class="background"></div>
+
+        <div class="main_card">
+          <header>
+            <h3></h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
+          </header>
+
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="background"></div>
+
+        <div class="main_card">
+          <header>
+            <h3></h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
+          </header>
+
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="background"></div>
+
+        <div class="main_card">
+          <header>
+            <h3></h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
+          </header>
+
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="background"></div>
+
+        <div class="main_card">
+          <header>
+            <h3></h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
+          </header>
+
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="background"></div>
+
+        <div class="main_card">
+          <header>
+            <h3></h3>
+            <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
+          </header>
+
+          <p></p>
+          <p></p>
+        </div>
+      </div> -->
     </div>
-  </div>
+  </main>
 
   <!-- <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
