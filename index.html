@@ -105,6 +105,15 @@
       color: var(--desaturated_blue);
     }
 
+    .options p {
+      cursor: pointer;
+      transition: .5s all ease;
+    }
+
+    .options p:hover {
+      color: var(--white);
+    }
+
     .dashboard {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -146,6 +155,12 @@
       border-radius: 1rem;
       padding: 2rem;
       gap: .5rem;
+      cursor: pointer;
+      transition: 1s all ease;
+    }
+
+    .main_card:hover {
+      filter: brightness(140%);
     }
 
     .main_card header {
@@ -160,6 +175,10 @@
       font-weight: 400;
       font-size: 16px;
       color: var(--white);
+    }
+
+    .main_card header img:hover {
+      filter: grayscale(1), brightness(110%);
     }
 
     .current_time {
@@ -316,6 +335,10 @@
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
     <p>Coded by <a href="https://github.com/RafaelHDSV" target="_blank">Rafael Henrique de Sousa Vieira</a>.</p>
   </footer>
+
+  <script>
+
+  </script>
 </body>
 
 </html>
