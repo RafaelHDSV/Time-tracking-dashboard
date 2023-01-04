@@ -15,6 +15,78 @@
   <title>Frontend Mentor | Time tracking dashboard</title>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+    /* font-family: 'Rubik', sans-serif; */
+
+    :root {
+      --blue: hsl(246, 80%, 60%);
+      --light_red: hsl(15, 100%, 70%);
+      --soft_blue: hsl(195, 74%, 62%);
+      --light_red: hsl(348, 100%, 68%);
+      --lime_green: hsl(145, 58%, 55%);
+      --violet: hsl(264, 64%, 52%);
+      --soft_orange: hsl(43, 84%, 65%);
+      --very_dark_blue: hsl(226, 43%, 10%);
+      --dark_blue: hsl(235, 46%, 20%);
+      --desaturated_blue: hsl(235, 45%, 61%);
+      --pale_blue: hsl(236, 100%, 87%);
+      --white: hsl(0, 0%, 100%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Rubik', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 100%;
+      min-height: 100vh;
+      background-color: var(--very_dark_blue);
+    }
+
+    .person {
+      background-color: var(--dark_blue);
+      border-radius: 1rem;
+      max-width: 15rem;
+      width: 100%;
+    }
+
+    .person_info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      background-color: var(--blue);
+      padding: 2rem 1.5rem 4rem 1.5rem;
+      border-radius: 1rem;
+    }
+
+    .person_info img {
+      max-width: 5rem;
+      width: 100%;
+      border: 3px solid var(--white);
+      border-radius: 50%;
+    }
+
+    .person_info .text {
+      color: var(--white);
+    }
+
+    .person_info .text p {
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    .person_info .text h2 {
+      font-weight: 300;
+      font-size: 42px;
+    }
+
     /* .attribution {
       font-size: 11px;
       text-align: center;
@@ -28,12 +100,22 @@
 
 <body>
 
-  <!-- Report for -->
-  <!-- Jeremy Robson -->
+  <div class="person">
+    <div class="person_info">
+      <img src="images/image-jeremy.png" alt="image-jeremy.png">
 
-  <!-- Daily -->
-  <!-- Weekly -->
-  <!-- Monthly -->
+      <div class="text">
+        <p>Report for</p>
+        <h2>Jeremy Robson</h2>
+      </div>
+    </div>
+
+    <div class="options">
+      <p>Daily</p>
+      <p>Weekly</p>
+      <p>Monthly</p>
+    </div>
+  </div>
 
   <!-- <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
