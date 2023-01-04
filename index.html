@@ -235,12 +235,12 @@
     <div class="dashboard">
       <div class="card">
         <div class="background">
-          <img src="images/" alt="">
+          <img class='img_card' src="images/" alt="">
         </div>
 
         <div class="main_card">
           <header>
-            <h3>Title</h3>
+            <h3 class="title_card">Title</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
@@ -251,12 +251,12 @@
 
       <div class="card">
         <div class="background">
-          <img src="images/" alt="">
+          <img class='img_card' src="images/" alt="">
         </div>
 
         <div class="main_card">
           <header>
-            <h3>Title</h3>
+            <h3 class="title_card">Title</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
@@ -267,12 +267,12 @@
 
       <div class="card">
         <div class="background">
-          <img src="images/" alt="">
+          <img class='img_card' src="images/" alt="">
         </div>
 
         <div class="main_card">
           <header>
-            <h3>Title</h3>
+            <h3 class="title_card">Title</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
@@ -283,12 +283,12 @@
 
       <div class="card">
         <div class="background">
-          <img src="images/" alt="">
+          <img class='img_card' src="images/" alt="">
         </div>
 
         <div class="main_card">
           <header>
-            <h3>Title</h3>
+            <h3 class="title_card">Title</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
@@ -299,12 +299,12 @@
 
       <div class="card">
         <div class="background">
-          <img src="images/" alt="">
+          <img class='img_card' src="images/" alt="">
         </div>
 
         <div class="main_card">
           <header>
-            <h3>Title</h3>
+            <h3 class="title_card">Title</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
@@ -315,12 +315,12 @@
 
       <div class="card">
         <div class="background">
-          <img src="images/" alt="">
+          <img class='img_card' src="images/" alt="">
         </div>
 
         <div class="main_card">
           <header>
-            <h3>Title</h3>
+            <h3 class="title_card">Title</h3>
             <img src="images/icon-ellipsis.svg" alt="icon-ellipsis.svg">
           </header>
 
@@ -337,7 +337,22 @@
   </footer>
 
   <script>
+    let imgCard = document.querySelectorAll('.img_card')
+    let titleCard = document.querySelectorAll('.title_card')
+    let currentTime = document.querySelectorAll('.current_time')
+    let lastTime = document.querySelectorAll('.last_time')
 
+    fetch('data.json').then((response) => {
+      response.json().then((activities) => {
+        console.log(activities);
+        for (let i = 0; i < titleCard.length; i++) {
+          titleCard[i].innerHTML = activities[i].title
+          currentTime[i].innerHTML = `${activities[i].timeframes.weekly.current}hrs`
+          lastTime[i].innerHTML = `Last week - ${activities[i].timeframes.weekly.previous}hrs`
+          imgCard[i].src = `images/icon-${((titleCard[i].innerHTML).replace(' ', '-')).toLocaleLowerCase()}.svg`
+        }
+      })
+    })
   </script>
 </body>
 
