@@ -338,6 +338,7 @@
 
   <script>
     let imgCard = document.querySelectorAll('.img_card')
+    let backgroundCard = document.querySelectorAll('.background')
     let titleCard = document.querySelectorAll('.title_card')
     let currentTime = document.querySelectorAll('.current_time')
     let lastTime = document.querySelectorAll('.last_time')
@@ -350,6 +351,7 @@
           currentTime[i].innerHTML = `${activities[i].timeframes.weekly.current}hrs`
           lastTime[i].innerHTML = `Last week - ${activities[i].timeframes.weekly.previous}hrs`
           imgCard[i].src = `images/icon-${((titleCard[i].innerHTML).replace(' ', '-')).toLocaleLowerCase()}.svg`
+          backgroundCard[i].style.backgroundColor = `var(--${activities[i].color})`
         }
       })
     })
