@@ -114,6 +114,10 @@
       color: var(--white);
     }
 
+    .current_option {
+      color: var(--white);
+    }
+
     .dashboard {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -226,9 +230,9 @@
       </div>
 
       <div class="options">
-        <p>Daily</p>
-        <p>Weekly</p>
-        <p>Monthly</p>
+        <p class="daily">Daily</p>
+        <p class="weekly current_option">Weekly</p>
+        <p class="monthly">Monthly</p>
       </div>
     </div>
 
@@ -337,11 +341,33 @@
   </footer>
 
   <script>
+    let daily = document.querySelector('.daily')
+    let weekly = document.querySelector('.weekly')
+    let monthly = document.querySelector('.monthly')
     let imgCard = document.querySelectorAll('.img_card')
     let backgroundCard = document.querySelectorAll('.background')
     let titleCard = document.querySelectorAll('.title_card')
     let currentTime = document.querySelectorAll('.current_time')
     let lastTime = document.querySelectorAll('.last_time')
+    let currentOption = 'weekly'
+
+    daily.addEventListener('click', () => {
+      document.querySelector(`.${currentOption}`).classList.remove('current_option')
+      daily.classList.add('current_option')
+      currentOption = 'daily'
+    })
+
+    weekly.addEventListener('click', () => {
+      document.querySelector(`.${currentOption}`).classList.remove('current_option')
+      weekly.classList.add('current_option')
+      currentOption = 'weekly'
+    })
+
+    monthly.addEventListener('click', () => {
+      document.querySelector(`.${currentOption}`).classList.remove('current_option')
+      monthly.classList.add('current_option')
+      currentOption = 'monthly'
+    })
 
     fetch('data.json').then((response) => {
       response.json().then((activities) => {
