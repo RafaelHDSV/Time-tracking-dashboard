@@ -220,14 +220,9 @@ footer a:hover {
 
 @media screen and (max-width: 768px) {
     body {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        min-height: 100vh;
-        background-color: var(--very_dark_blue);
+        /* justify-content: flex-start; */
         margin: 0;
+        height: auto;
     }
 
     main {
@@ -235,16 +230,19 @@ footer a:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-height: 32rem;
-        height: 100vh;
+        width: 100%;
+        min-height: 100vh;
+        height: 100%;
     }
 
     .person {
+        display: flex;
+        flex-direction: column;
         background-color: var(--dark_blue);
         border-radius: 1rem;
         max-width: none;
         width: 90%;
-        height: 100%;
+        height: 100vh;
     }
 
     .person_info {
@@ -295,12 +293,11 @@ footer a:hover {
     }
 
     .dashboard {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        column-gap: 2rem;
-        row-gap: 2rem;
-        /* padding: 0 0 0 2rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 2rem;
     }
 
     .card {
