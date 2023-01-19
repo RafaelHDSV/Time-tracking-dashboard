@@ -223,7 +223,7 @@ footer a:hover {
         min-width: none;
         min-height: none;
         width: 100vw;
-        padding: 0;
+        padding: 1rem 0;
     }
 
     main {
