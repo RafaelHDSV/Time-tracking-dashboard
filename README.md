@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: URL SOLUTION HERE
-- Live Site URL: URL SITE HERE
+- Live Site URL: https://time-tracking-dashboard-rafael.netlify.app
 
 ### Screenshot
 
