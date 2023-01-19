@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: URL SOLUTION HERE
+- Solution URL: https://www.frontendmentor.io/solutions/time-tracking-dashboard-6zO64DqIzb
 - Live Site URL: https://time-tracking-dashboard-rafael.netlify.app
 
 ### Screenshot
