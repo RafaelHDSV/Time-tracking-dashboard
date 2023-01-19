@@ -220,10 +220,9 @@ footer a:hover {
 
 @media screen and (max-width: 768px) {
     body {
-        /* CORRIGIR */
-        width: 100%;
-        /* height: 100%; */
-        margin: 0;
+        min-width: none;
+        min-height: none;
+        width: 100vw;
         padding: 0;
     }
 
@@ -237,8 +236,7 @@ footer a:hover {
 
     .person {
         max-width: none;
-        /* CORRIGIR */
-        width: 70%;
+        width: 100vw;
     }
 
     .person_info {
@@ -275,86 +273,5 @@ footer a:hover {
     .card {
         max-width: none;
         width: 100vw;
-    }
-
-    .background {
-        display: flex;
-        background-color: var(--white);
-        width: 100%;
-        height: 5rem;
-        border-radius: 1rem;
-        position: relative;
-        overflow: hidden;
-        z-index: -1;
-    }
-
-    .background img {
-        position: absolute;
-        right: 1rem;
-        top: -.5rem;
-    }
-
-    .main_card {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--dark_blue);
-        margin: -2rem 0 0 0;
-        border-radius: 1rem;
-        padding: 2rem;
-        gap: .5rem;
-        cursor: pointer;
-        transition: 1s all ease;
-    }
-
-    .main_card:hover {
-        filter: brightness(140%);
-    }
-
-    .main_card header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 0 1rem 0;
-    }
-
-    .main_card header h3 {
-        font-weight: 400;
-        font-size: 16px;
-        color: var(--white);
-    }
-
-    .main_card header img:hover {
-        filter: grayscale(1), brightness(110%);
-    }
-
-    .current_time {
-        color: var(--white);
-        font-weight: 300;
-        font-size: 48px;
-    }
-
-    .last_time {
-        color: var(--desaturated_blue);
-    }
-
-    footer {
-        color: var(--white);
-        font-size: 11px;
-        text-align: center;
-        position: absolute;
-        bottom: 1rem;
-    }
-
-    footer a {
-        text-decoration: none;
-        color: var(--soft_blue);
-        cursor: pointer;
-        transition: .5s all ease;
-    }
-
-    footer a:hover {
-        font-size: 18px;
-        color: var(--orange);
     }
 }
