@@ -51,4 +51,4 @@ Users should be able to:
 - JS
 - JSON
 
-[⬆ Back to the top](#name_of_repository)<br>
+[⬆ Back to the top](#frontend-mentor---time-tracking-dashboard-solution)<br>
